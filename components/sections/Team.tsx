@@ -59,8 +59,8 @@ export default function Team() {
             <div className="section-divider" />
             <span className="section-label">09 · Mi Equipo · 4 Frentes Operativos</span>
             <h2 className="heading-display mt-4">
-              No trabajo solo. Detrás de cada proyecto hay{' '}
-              <span className="italic-serif">cuatro casas</span> con personas, método y oficio.
+              No construyo proyectos en solitario. Cada desafío se respalda en equipos, experiencia y empresas consolidadas que convierten{' '}
+              <span className="italic-serif">ideas en ejecución.</span>
             </h2>
             <p className="body-lead mt-6">
               La asesoría llega contigo en la conversación; la ejecución llega con mis equipos. Cada uno cubre un frente del mismo problema: cómo tu marca aparece, vende y crece.
