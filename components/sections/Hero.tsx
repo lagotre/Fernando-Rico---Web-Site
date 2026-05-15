@@ -77,7 +77,7 @@ export default function Hero() {
         <div className="relative hidden lg:block">
           <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent z-10" />
           <Image
-            src="/images/hero.jpg"
+            src="/images/fernando-bw.png"
             alt="Fernando Rico Medina — Consultor estratégico"
             fill
             className="object-cover object-center"
@@ -94,7 +94,7 @@ export default function Hero() {
       {/* Mobile hero image */}
       <div className="lg:hidden relative h-72 overflow-hidden">
         <Image
-          src="/images/hero.jpg"
+          src="/images/fernando-bw.png"
           alt="Fernando Rico Medina"
           fill
           className="object-cover object-top"
