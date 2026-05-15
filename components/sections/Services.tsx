@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
-const CALENDLY = 'https://calendly.com/fernandoricomedina'
+const CALENDLY = 'https://calendar.app.google/FAEue2ZuGUf3cR7J7'
 
 const services = [
   {

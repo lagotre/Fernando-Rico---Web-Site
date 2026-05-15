@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 
-const WHATSAPP = 'https://wa.me/573158994202?text=Hola%20Fernando%2C%20tengo%20una%20pregunta%20sobre%20tu%20consultor%C3%ADa.'
+const WHATSAPP = 'https://api.whatsapp.com/send/?phone=573158994202&text&type=phone_number&app_absent=0'
 
 const faqs = [
   {

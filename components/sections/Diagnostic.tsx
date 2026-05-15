@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from 'react'
 
-const CALENDLY = 'https://calendly.com/fernandoricomedina'
-const WHATSAPP = 'https://wa.me/573158994202?text=Hola%20Fernando%2C%20quiero%20hablar%20sobre%20mi%20empresa.'
+const CALENDLY = 'https://calendar.app.google/FAEue2ZuGUf3cR7J7'
+const WHATSAPP = 'https://api.whatsapp.com/send/?phone=573158994202&text&type=phone_number&app_absent=0'
 
 const includes = [
   'Análisis de tu situación competitiva en el canal',

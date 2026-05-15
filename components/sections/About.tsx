@@ -1,8 +1,9 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 
-const CALENDLY = 'https://calendly.com/fernandoricomedina'
+const CALENDAR = 'https://calendar.app.google/FAEue2ZuGUf3cR7J7'
 
 const formation = [
   'Diseño Industrial · Pontificia Universidad Javeriana',
@@ -33,21 +34,16 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Photo column */}
           <div className="reveal">
-            {/* Photo placeholder */}
-            <div className="relative bg-stone aspect-[4/5] overflow-hidden">
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-navy/20">
-                <div className="w-20 h-20 rounded-full border-2 border-navy/20 flex items-center justify-center mb-4">
-                  <span className="font-serif text-2xl text-navy/30">FRM</span>
-                </div>
-                <p className="font-mono text-[10px] tracking-ultra uppercase">
-                  Agregar foto aquí
-                </p>
-                <p className="font-mono text-[9px] tracking-wide uppercase text-navy/15 mt-1">
-                  /public/images/fernando-rico.jpg
-                </p>
-              </div>
-              {/* If image exists: */}
-              {/* <Image src="/images/fernando-rico.jpg" alt="Fernando Rico Medina" fill className="object-cover" /> */}
+            <div className="relative aspect-[4/5] overflow-hidden bg-stone">
+              <Image
+                src="/images/fernando-portrait.jpg"
+                alt="Fernando Rico Medina"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              {/* Subtle gold overlay at bottom */}
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-navy/20 to-transparent" />
             </div>
             <div className="flex items-center justify-between mt-4 px-1">
               <p className="font-mono text-[10px] tracking-ultra uppercase text-navy/40">FRM · Bogotá</p>
@@ -104,7 +100,7 @@ export default function About() {
 
             {/* CTAs */}
             <div className="reveal reveal-delay-4 flex flex-wrap gap-4">
-              <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <a href={CALENDAR} target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Agendar diagnóstico <span className="text-base">→</span>
               </a>
               <a

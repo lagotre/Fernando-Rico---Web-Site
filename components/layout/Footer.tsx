@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const footerNav = [
   { href: '#servicios', label: 'Servicios' },
   { href: '#industrias', label: 'Industrias' },
@@ -7,8 +9,8 @@ const footerNav = [
   { href: '#faq', label: 'FAQ' },
 ]
 
-const CALENDLY = 'https://calendly.com/fernandoricomedina'
-const WHATSAPP = 'https://wa.me/573158994202?text=Hola%20Fernando%2C%20quiero%20agendar%20mi%20diagn%C3%B3stico%20estrat%C3%A9gico.'
+const CALENDLY = 'https://calendar.app.google/FAEue2ZuGUf3cR7J7'
+const WHATSAPP = 'https://api.whatsapp.com/send/?phone=573158994202&text&type=phone_number&app_absent=0'
 
 export default function Footer() {
   return (
@@ -18,8 +20,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-8 border border-gold flex items-center justify-center">
-                <span className="font-serif font-medium text-sm text-gold leading-none">FRM</span>
+              <div className="w-9 h-9 relative flex-shrink-0">
+                <Image
+                  src="/images/logo-simbolo.png"
+                  alt="Logo Fernando Rico"
+                  fill
+                  className="object-contain brightness-0 invert"
+                  sizes="36px"
+                />
               </div>
               <span className="font-serif text-xl font-medium">
                 Fernando Rico<span className="text-gold">.</span>

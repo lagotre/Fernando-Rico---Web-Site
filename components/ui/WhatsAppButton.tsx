@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-const WHATSAPP = 'https://wa.me/573158994202?text=Hola%20Fernando%2C%20quiero%20agendar%20mi%20diagn%C3%B3stico%20estrat%C3%A9gico.'
+const WHATSAPP = 'https://api.whatsapp.com/send/?phone=573158994202&text&type=phone_number&app_absent=0'
 
 export default function WhatsAppButton() {
   const [visible, setVisible] = useState(false)

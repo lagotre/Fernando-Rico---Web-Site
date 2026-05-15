@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 const navLinks = [
   { href: '#servicios', label: 'Servicios' },
@@ -11,8 +12,8 @@ const navLinks = [
   { href: '#faq', label: 'FAQ' },
 ]
 
-const WHATSAPP = 'https://wa.me/573158994202?text=Hola%20Fernando%2C%20quiero%20agendar%20mi%20diagn%C3%B3stico%20estrat%C3%A9gico.'
-const CALENDLY = 'https://calendly.com/fernandoricomedina'
+const WHATSAPP = 'https://api.whatsapp.com/send/?phone=573158994202&text&type=phone_number&app_absent=0'
+const CALENDLY = 'https://calendar.app.google/FAEue2ZuGUf3cR7J7'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -43,11 +44,22 @@ export default function Navbar() {
         <div className="container-site">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-3 group">
-              <div className="w-8 h-8 border border-gold flex items-center justify-center">
-                <span className="font-serif font-medium text-sm text-gold leading-none">FRM</span>
+            <a
+              href="#"
+              onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+              className="flex items-center gap-3 group"
+              aria-label="Fernando Rico Medina - Inicio"
+            >
+              <div className="w-9 h-9 relative flex-shrink-0">
+                <Image
+                  src="/images/logo-simbolo.png"
+                  alt="Logo Fernando Rico"
+                  fill
+                  className="object-contain"
+                  sizes="36px"
+                />
               </div>
-              <span className={`font-serif text-xl font-medium transition-colors duration-300 ${scrolled ? 'text-navy' : 'text-navy'}`}>
+              <span className="font-serif text-xl font-medium text-navy">
                 Fernando Rico<span className="text-gold">.</span>
               </span>
             </a>
